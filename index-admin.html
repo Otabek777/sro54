@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media.css">
+    <title></title>
+</head>
+<body>
+    <header class="header"> 
+        <img src="img/header2.png" alt="">
+    </header>
+    <main class="main">
+        <section class="documents">
+            <div class="container2">
+                <div class="documents__box">
+                    <div class="documents__content documents__content_admin">
+                        <div class="documents__wrap">
+                            <div class="top_tab">
+                                <button class="btn active" id="btn-tab1">Загрузка документов</button>
+                                <button class="btn" id="btn-tab2">Хронология обмена</button>
+                            </div>
+                            <div class="block_tab active" id="block-tab1">
+                                <div class="documents__file">
+                                    <h5>Загрузить PDF</h5>
+                                    <div class="files">
+                                        2 файла загружены
+                                    </div>
+                                    <div class="add_file">
+                                        <input type="file">
+                                    </div>
+                                </div>
+                                <div class="documents__address">
+                                    <h5>Адресат</h5>
+                                    <input type="text" placeholder="ИНН">
+                                </div>
+                                <div class="documents__btn">
+                                    <div class="send">
+                                        <button class="btn_send not_active">
+                                            <div class="not_active_alert">
+                                                <p>
+                                                    Для отправки документов необходимо заполнить оба поля
+                                                </p>
+                                            </div>
+                                            Отправить
+                                        </button>
+                                    </div>
+                                    <button class="btn_sign not_active">Подписать</button>
+                                </div>
+                            </div>
+                            <div class="block_tab" id="block-tab2">
+                                <div class="timeline">
+                                    <h5 class="title">Поиск документов:</h5>
+                                    <div class="name_ur">
+                                        <h5>Наименование юр.лица</h5>
+                                        <input type="text" placeholder="ООО “Норильский никель”">
+                                    </div>
+                                    <div class="input_box">
+                                        <div class="input">
+                                            <h6>ИНН Юр.лица</h6>
+                                            <input type="text" placeholder="65462641146">
+                                        </div>
+                                        <div class="input">
+                                            <h6>Дата отправки</h6>
+                                            <input type="date">
+                                        </div>
+                                        <div class="input">
+                                            <h6>Дата изменения</h6>
+                                            <input type="date">
+                                        </div>
+                                        <div class="input">
+                                            <h6>Статус</h6>
+                                            <select class="select" name="language">
+                                                <option disabled>Отклонено</option>
+                                                <option value="Отклонено">Отклонено</option>
+                                                <option value="Отклонено">Отклонено</option>
+                                                <option value="Отклонено">Отклонено</option>
+                                            </select>
+                                        </div>
+                                        <div class="input">
+                                            <h6>Тип отправки</h6>
+                                            <select class="select" name="language">
+                                                <option disabled>Исходящий</option>
+                                                <option value="Исходящий">Исходящий</option>
+                                                <option value="Исходящий">Исходящий</option>
+                                                <option value="Исходящий">Исходящий</option>
+                                            </select>
+                                        </div>
+                                        <div class="input">
+                                            <h6>ID отправки</h6>
+                                            <input type="text" placeholder="65462641146">
+                                        </div>
+                                        <div class="input">
+                                            <h6>Отправка</h6>
+                                            <select class="select" name="language">
+                                                <option disabled>Получено</option>
+                                                <option value="Получено">Получено</option>
+                                                <option value="Получено">Получено</option>
+                                                <option value="Получено">Получено</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <button class="reset">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="10" height="11" viewBox="0 0 10 11" fill="none">
+                                            <path d="M9.76562 0.25H8.82812C8.71094 0.25 8.59375 0.367188 8.59375 0.484375C8.59375 0.503906 8.59375 0.503906 8.59375 0.503906L8.67188 2.125C7.79297 1.07031 6.46484 0.40625 5 0.40625C2.32422 0.40625 0.136719 2.59375 0.15625 5.26953C0.15625 7.94531 2.32422 10.0938 5 10.0938C6.25 10.0938 7.38281 9.625 8.24219 8.86328C8.28125 8.80469 8.32031 8.74609 8.32031 8.6875C8.32031 8.60938 8.28125 8.55078 8.24219 8.51172L7.57812 7.84766C7.53906 7.80859 7.48047 7.78906 7.42188 7.78906C7.36328 7.78906 7.30469 7.80859 7.26562 7.84766C6.66016 8.375 5.85938 8.6875 5 8.6875C3.08594 8.6875 1.5625 7.16406 1.5625 5.25C1.5625 3.35547 3.08594 1.8125 5 1.8125C6.17188 1.8125 7.22656 2.41797 7.85156 3.33594L5.85938 3.23828C5.85938 3.23828 5.85938 3.23828 5.83984 3.23828C5.72266 3.23828 5.60547 3.35547 5.60547 3.47266H5.625V4.41016C5.625 4.52734 5.72266 4.64453 5.85938 4.64453H9.76562C9.88281 4.64453 10 4.52734 10 4.41016V0.484375C10 0.367188 9.88281 0.25 9.76562 0.25Z" fill="#FF2C2C"/>
+                                        </svg>
+                                        Сбросить
+                                    </button>
+                                    <div class="search_btn">
+                                        <button class="btn not_active">Поиск</button>
+                                    </div>
+                                    <div class="table_check table_check_admin">
+                                        <div class="wrap_check">
+                                            <div class="top_check">
+                                                <input type="checkbox">
+                                                <div class="wrap">
+                                                    <div class="entity">
+                                                        Наименование <br> Юр.лица
+                                                    </div>
+                                                    <div class="inn">
+                                                        ИНН <br> Юр.лица
+                                                    </div>
+                                                    <div class="departure_date active">
+                                                        Дата отправки
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="6" height="12" viewBox="0 0 6 12" fill="none">
+                                                            <path d="M3 0L0.113249 5H5.88675L3 0Z" fill="#CACACA"/>
+                                                            <path d="M3 12L0.113249 7H5.88675L3 12Z" fill="#CACACA"/>
+                                                        </svg>
+                                                    </div>
+                                                    <div class="date_of_change">
+                                                        Дата изменения
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="6" height="12" viewBox="0 0 6 12" fill="none">
+                                                            <path d="M3 0L0.113249 5H5.88675L3 0Z" fill="#CACACA"/>
+                                                            <path d="M3 12L0.113249 7H5.88675L3 12Z" fill="#CACACA"/>
+                                                        </svg>
+                                                    </div>
+                                                    <div class="status">
+                                                        Статус
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="6" height="12" viewBox="0 0 6 12" fill="none">
+                                                            <path d="M3 0L0.113249 5H5.88675L3 0Z" fill="#CACACA"/>
+                                                            <path d="M3 12L0.113249 7H5.88675L3 12Z" fill="#CACACA"/>
+                                                        </svg>
+                                                    </div>
+                                                    <div class="type">
+                                                        Тип отправки
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="6" height="12" viewBox="0 0 6 12" fill="none">
+                                                            <path d="M3 0L0.113249 5H5.88675L3 0Z" fill="#CACACA"/>
+                                                            <path d="M3 12L0.113249 7H5.88675L3 12Z" fill="#CACACA"/>
+                                                        </svg>
+                                                    </div>
+                                                    <div class="code">
+                                                        ID отправки
+                                                    </div>
+                                                    <div class="sending">
+                                                        Отправка
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="block_check">
+                                                <input type="checkbox">
+                                                <div class="wrap">
+                                                    <div class="entity">
+                                                        ООО “Норильский никель”
+                                                    </div>
+                                                    <div class="inn">
+                                                        1234567891
+                                                    </div>
+                                                    <div class="departure_date">
+                                                        23.03.2008г.
+                                                    </div>
+                                                    <div class="date_of_change">
+                                                        23.03.2008г.
+                                                    </div>
+                                                    <div class="status">
+                                                        <p class="sel">
+                                                            На модерации
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="6" viewBox="0 0 10 6" fill="none">
+                                                                <path d="M5 3.81846L1.11094 0L0 1.09077L5 6L10 1.09077L8.88906 0L5 3.81846Z" fill="#5840ED"/>
+                                                            </svg>
+                                                        </p>
+                                                    </div>
+                                                    <div class="type">
+                                                        Входящий
+                                                    </div>
+                                                    <div class="code">
+                                                        2356576537
+                                                    </div>
+                                                    <div class="sending">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="block_check">
+                                                <input type="checkbox">
+                                                <div class="wrap">
+                                                    <div class="entity">
+                                                        ООО “Норильский никель”
+                                                    </div>
+                                                    <div class="inn">
+                                                        1234567891
+                                                    </div>
+                                                    <div class="departure_date">
+                                                        23.03.2008г.
+                                                    </div>
+                                                    <div class="date_of_change">
+                                                        23.03.2008г.
+                                                    </div>
+                                                    <div class="status">
+                                                        <p class="sel">
+                                                            На модерации
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="6" viewBox="0 0 10 6" fill="none">
+                                                                <path d="M5 3.81846L1.11094 0L0 1.09077L5 6L10 1.09077L8.88906 0L5 3.81846Z" fill="#5840ED"/>
+                                                            </svg>
+                                                        </p>
+                                                    </div>
+                                                    <div class="type">
+                                                        Входящий
+                                                    </div>
+                                                    <div class="code">
+                                                        2356576537
+                                                    </div>
+                                                    <div class="sending">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="block_check">
+                                                <input type="checkbox">
+                                                <div class="wrap">
+                                                    <div class="entity">
+                                                        ООО «Великосочный мясной комбинат имени кого - то»
+                                                    </div>
+                                                    <div class="inn">
+                                                        1234567891
+                                                    </div>
+                                                    <div class="departure_date">
+                                                        23.03.2008г.
+                                                    </div>
+                                                    <div class="date_of_change">
+                                                        23.03.2008г.
+                                                    </div>
+                                                    <div class="status">
+                                                        <p class="sel">
+                                                            На модерации
+                                                        </p>
+                                                    </div>
+                                                    <div class="type">
+                                                        Исходящий
+                                                    </div>
+                                                    <div class="code">
+                                                        2356576537
+                                                    </div>
+                                                    <div class="sending">
+                                                        Отправлено
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="block_check">
+                                                <input type="checkbox">
+                                                <div class="wrap">
+                                                    <div class="entity">
+                                                        ООО «Великосочный мясной комбинат имени кого - то осо...
+                                                    </div>
+                                                    <div class="inn">
+                                                        1234567891
+                                                    </div>
+                                                    <div class="departure_date">
+                                                        23.03.2008г.
+                                                    </div>
+                                                    <div class="date_of_change">
+                                                        23.03.2008г.
+                                                    </div>
+                                                    <div class="status received">
+                                                        Подписан
+                                                    </div>
+                                                    <div class="type">
+                                                        Исходящий
+                                                    </div>
+                                                    <div class="code">
+                                                        2356576537
+                                                    </div>
+                                                    <div class="sending">
+                                                        Отправлено
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="block_check">
+                                                <input type="checkbox">
+                                                <div class="wrap">
+                                                    <div class="entity">
+                                                        ООО «Великосочный мясной комбинат имени кого - то осо...
+                                                    </div>
+                                                    <div class="inn">
+                                                        1234567891
+                                                    </div>
+                                                    <div class="departure_date">
+                                                        23.03.2008г.
+                                                    </div>
+                                                    <div class="date_of_change">
+                                                        23.03.2008г.
+                                                    </div>
+                                                    <div class="status received">
+                                                        Подписан
+                                                    </div>
+                                                    <div class="type">
+                                                        Исходящий
+                                                    </div>
+                                                    <div class="code">
+                                                        2356576537
+                                                    </div>
+                                                    <div class="sending">
+                                                        Получено
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="block_check">
+                                                <input type="checkbox">
+                                                <div class="wrap">
+                                                    <div class="entity">
+                                                        ООО «Великосочный мясной комбинат имени кого - то»
+                                                    </div>
+                                                    <div class="inn">
+                                                        1234567891
+                                                    </div>
+                                                    <div class="departure_date">
+                                                        23.03.2008г.
+                                                    </div>
+                                                    <div class="date_of_change">
+                                                        23.03.2008г.
+                                                    </div>
+                                                    <div class="status">
+                                                        <p class="sel">
+                                                            На модерации
+                                                        </p>
+                                                    </div>
+                                                    <div class="type">
+                                                        Исходящий
+                                                    </div>
+                                                    <div class="code">
+                                                        2356576537
+                                                    </div>
+                                                    <div class="sending">
+                                                        Отправлено
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="block_check">
+                                                <input type="checkbox">
+                                                <div class="wrap">
+                                                    <div class="entity">
+                                                        ООО «Великосочный мясной комбинат имени кого - то осо...
+                                                    </div>
+                                                    <div class="inn">
+                                                        1234567891
+                                                    </div>
+                                                    <div class="departure_date">
+                                                        23.03.2008г.
+                                                    </div>
+                                                    <div class="date_of_change">
+                                                        23.03.2008г.
+                                                    </div>
+                                                    <div class="status received">
+                                                        Подписан
+                                                    </div>
+                                                    <div class="type">
+                                                        Исходящий
+                                                    </div>
+                                                    <div class="code">
+                                                        2356576537
+                                                    </div>
+                                                    <div class="sending">
+                                                        Отправлено
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="block_check">
+                                                <input type="checkbox">
+                                                <div class="wrap">
+                                                    <div class="entity">
+                                                        ООО «Великосочный мясной комбинат имени кого - то осо...
+                                                    </div>
+                                                    <div class="inn">
+                                                        1234567891
+                                                    </div>
+                                                    <div class="departure_date">
+                                                        23.03.2008г.
+                                                    </div>
+                                                    <div class="date_of_change">
+                                                        23.03.2008г.
+                                                    </div>
+                                                    <div class="status received">
+                                                        Подписан
+                                                    </div>
+                                                    <div class="type">
+                                                        Исходящий
+                                                    </div>
+                                                    <div class="code">
+                                                        2356576537
+                                                    </div>
+                                                    <div class="sending">
+                                                        Получено
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="block_check">
+                                                <input type="checkbox">
+                                                <div class="wrap">
+                                                    <div class="entity">
+                                                        ООО «Великосочный мясной комбинат имени кого - то осо...
+                                                    </div>
+                                                    <div class="inn">
+                                                        1234567891
+                                                    </div>
+                                                    <div class="departure_date">
+                                                        23.03.2008г.
+                                                    </div>
+                                                    <div class="date_of_change">
+                                                        23.03.2008г.
+                                                    </div>
+                                                    <div class="status received">
+                                                        Подписан
+                                                    </div>
+                                                    <div class="type">
+                                                        Исходящий
+                                                    </div>
+                                                    <div class="code">
+                                                        2356576537
+                                                    </div>
+                                                    <div class="sending">
+                                                        Отправлено
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="block_check">
+                                                <input type="checkbox">
+                                                <div class="wrap">
+                                                    <div class="entity">
+                                                        ООО «Великосочный мясной комбинат имени кого - то осо...
+                                                    </div>
+                                                    <div class="inn">
+                                                        1234567891
+                                                    </div>
+                                                    <div class="departure_date">
+                                                        23.03.2008г.
+                                                    </div>
+                                                    <div class="date_of_change">
+                                                        23.03.2008г.
+                                                    </div>
+                                                    <div class="status received">
+                                                        Подписан
+                                                    </div>
+                                                    <div class="type">
+                                                        Исходящий
+                                                    </div>
+                                                    <div class="code">
+                                                        2356576537
+                                                    </div>
+                                                    <div class="sending">
+                                                        Получено
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="bottom">
+                                            <div class="paginator">
+                                                <a href="#" class="link active">1</a>
+                                                <a href="#" class="link">2</a>
+                                                <a href="#" class="link">3</a>
+                                                <p>...</p>
+                                                <a href="#" class="next">
+                                                    След. страница
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="13" height="8" viewBox="0 0 13 8" fill="none">
+                                                        <path d="M12.3536 4.35355C12.5488 4.15829 12.5488 3.84171 12.3536 3.64645L9.17157 0.464466C8.97631 0.269204 8.65973 0.269204 8.46447 0.464466C8.2692 0.659728 8.2692 0.976311 8.46447 1.17157L11.2929 4L8.46447 6.82843C8.2692 7.02369 8.2692 7.34027 8.46447 7.53553C8.65973 7.7308 8.97631 7.7308 9.17157 7.53553L12.3536 4.35355ZM0 4.5H12V3.5H0V4.5Z" fill="#656565"/>
+                                                    </svg>
+                                                </a>
+                                            </div>
+                                            <button class="btn_download not_active">Скачать документ</button>
+                                            <button class="btn_chat">Перейти в чат</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="chat_wrap">
+                            <div class="chat">
+                                <div class="top">
+                                    <h5>Чат</h5>
+                                    <div class="info">
+                                        <p class="code">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
+                                                <path d="M10 0.8125C4.64844 0.8125 0.3125 5.1875 0.3125 10.5C0.3125 15.8516 4.64844 20.1875 10 20.1875C15.3125 20.1875 19.6875 15.8516 19.6875 10.5C19.6875 5.1875 15.3125 0.8125 10 0.8125ZM10 5.10938C10.8984 5.10938 11.6406 5.85156 11.6406 6.75C11.6406 7.6875 10.8984 8.39062 10 8.39062C9.0625 8.39062 8.35938 7.6875 8.35938 6.75C8.35938 5.85156 9.0625 5.10938 10 5.10938ZM12.1875 15.0312C12.1875 15.3047 11.9531 15.5 11.7188 15.5H8.28125C8.00781 15.5 7.8125 15.3047 7.8125 15.0312V14.0938C7.8125 13.8594 8.00781 13.625 8.28125 13.625H8.75V11.125H8.28125C8.00781 11.125 7.8125 10.9297 7.8125 10.6562V9.71875C7.8125 9.48438 8.00781 9.25 8.28125 9.25H10.7812C11.0156 9.25 11.25 9.48438 11.25 9.71875V13.625H11.7188C11.9531 13.625 12.1875 13.8594 12.1875 14.0938V15.0312Z" fill="#5138EE"/>
+                                            </svg>
+                                            110231
+                                        </p>
+                                        <div class="create">
+                                            <p>Создание</p>
+                                            <p>25.11.2022</p>
+                                        </div>
+                                        <p class="status red">
+                                            Отклонено
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="chat_content">
+                                    <div class="wrap">
+                                        <div class="left">
+                                            <h5 class="name">Администратор</h5>
+                                            <div class="text">
+                                                <p>Добрый день, ваша заявка принята. У вас остались ещё какие - нибудь вопросы? </p>
+                                            </div>
+                                            <div class="box">
+                                                <p class="date">10.12.2020</p>
+                                                <p class="time">10:30</p>
+                                            </div>
+                                        </div>
+                                        <div class="right read">
+                                            <div class="text">
+                                                <p>Нет, спасибо, мне все понятно</p>
+                                            </div>
+                                            <div class="box">
+                                                <p class="date">10.12.2020</p>
+                                                <p class="time">10:30</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bottom">
+                                    <div class="file">
+                                        <input type="file">
+                                    </div>
+                                    <div class="input">
+                                        <input type="text" placeholder="Написать сообщение...">
+                                    </div>
+                                    <button class="btn">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26" fill="none">
+                                            <path d="M23.3125 1.1875L1.5625 13.7031C0.71875 14.1719 0.8125 15.3906 1.65625 15.7188L6.67188 17.8281L20.125 5.96875C20.3594 5.73438 20.7344 6.0625 20.5 6.34375L9.25 20.0781V23.875C9.25 25 10.5625 25.4219 11.2188 24.625L14.2188 20.9688L20.0312 23.4531C20.6875 23.7344 21.4844 23.3125 21.5781 22.5625L24.9531 2.3125C25.1406 1.375 24.1094 0.71875 23.3125 1.1875Z" fill="#1B2C4C"/>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <img src="img/footer2.png" alt="">
+    </footer>
+    
+    <script src="js/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
